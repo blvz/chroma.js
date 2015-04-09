@@ -826,7 +826,8 @@
     u = r << 16 | g << 8 | b;
     str = "000000" + u.toString(16);
     str = str.substr(str.length - 6);
-    hxa = Math.round(a * 255).toString(16);
+    hxa = '0' + Math.round(a * 255).toString(16);
+    hxa = hxa.substr(hxa.length - 2);
     return "#" + (function() {
       switch (mode.toLowerCase()) {
         case 'rgba':
